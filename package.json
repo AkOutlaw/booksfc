@@ -1,8 +1,1 @@
-{
-  "name": "booksfc",
-  "version": "1.0.0",
-  "start": "node app.js",
-  "dependencies": {
-    "express": "^4.17.0"
-  }
-}
+ "scripts": {     "start": "node your-script.js" }
