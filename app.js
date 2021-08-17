@@ -123,6 +123,6 @@ app.put("/api/users", jsonParser, function(req, res){
     }
 });
    
-app.listen(80, function(){
+app.listen(PORT, function(){
     console.log("Сервер ожидает подключения...");
 });
