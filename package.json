@@ -1,1 +1,8 @@
- "scripts": {     "start": "node your-script.js" }
+ {
+  "name": "webapp",
+  "version": "1.0.0",
+  "dependencies": {
+    "express": "^4.17.0",
+  "start": "node your-script.js"
+  }
+}
