@@ -1,7 +1,7 @@
 {
   "name": "booksfc",
   "version": "1.0.0",
-  "start": "app",
+  "start": "app.js",
   "dependencies": {
     "express": "^4.17.0"
   }
