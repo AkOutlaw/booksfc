@@ -98,6 +98,7 @@ app.put("/api/users", jsonParser, function(req, res){
     const userName = req.body.name;
     const userAge = req.body.age;
 	const userDescription = req.body.description;
+	const PORT = process.env.PORT || 80
       
     let data = fs.readFileSync(filePath, "utf8");
     const users = JSON.parse(data);
