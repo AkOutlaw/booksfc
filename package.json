@@ -1,8 +1,8 @@
  {
   "name": "webapp",
   "version": "1.0.0",
+  "start": "node app.js"
   "dependencies": {
-    "express": "^4.17.0",
-  "start": "node your-script.js"
+    "express": "^4.17.0"
   }
 }
