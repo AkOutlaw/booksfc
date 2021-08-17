@@ -1,6 +1,7 @@
 {
-  "name": "webapp",
+  "name": "booksfc",
   "version": "1.0.0",
+  "start": "gulp",
   "dependencies": {
     "express": "^4.17.0"
   }
