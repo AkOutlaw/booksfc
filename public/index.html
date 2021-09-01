@@ -4,27 +4,34 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>Список пользователей</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+	<!-- <link rel="stylesheet" href="my.css"> -->
+	<link rel="stylesheet" href="bootstrap.min.css">
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" /> -->
 </head>
 <body>
-    <h2>Список пользователей</h2>
+    <h2>Форма заказа спиртного</h2>
     <form name="userForm">
         <input type="hidden" name="id" value="0" />
         <div class="form-group">
             <label for="name">Name:</label>
-            <input class="form-control" name="name" />
+            <!-- <input class="form-control" name="name" /> -->
+			<input class="form-control_janna1" name="name" />
         </div>
         <div class="form-group">
             <label for="age">Age:</label>
-            <input class="form-control" name="age" />
+            <!-- <input class="form-control" name="age" /> -->
+			 <input class="form-control_janna2" name="age" />
         </div>
 		 <div class="form-group">
             <label for="description">Description:</label>
-            <input class="form-control" name="description" />
+            <!-- <input class="form-control" name="description" /> -->
+			<input id ="placeholder1" class="form-control_janna3" name="description" />
         </div>
         <div class="panel-body">
-            <button type="submit" class="btn btn-sm btn-primary">Save</button>
-            <a id="reset" class="btn btn-sm btn-primary">Discard</a>
+            <!-- <button type="submit" class="btn btn-sm btn-primary">Save</button> -->
+            <!-- <a id="reset" class="btn btn-sm btn-primary">Discard</a> -->
+			<a id="reset" visible = "false" class="button_janna2">Save</a>
+			<button type="Cancel" class="button_janna1">Cancel</button>		
         </div>
     </form>
     <table class="table table-condensed table-striped table-bordered">
@@ -34,6 +41,8 @@
     </table>
    
     <script>
+	document.getElementById("placeholder1").placeholder = "Add your order here";
+
     // Получение всех пользователей
         async function GetUsers() {
             // отправляет запрос и получаем ответ
@@ -118,6 +127,7 @@
                 document.querySelector("tr[data-rowid='" + user.id + "']").remove();
             }
         }
+		
   
         // сброс формы
         function reset() {
@@ -127,6 +137,11 @@
 			form.elements["name"].value = '';
 			form.elements["age"].value = '';
 			form.elements["description"].value = '';
+        }
+		
+		function cancel() {
+			const form = document.forms["userForm"];
+            form.reset();
         }
 		
         // создание строки для таблицы
